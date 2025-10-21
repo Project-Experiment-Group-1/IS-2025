@@ -10,14 +10,10 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 5f;
     private bool jumpPressed = false;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        Debug.Log("OnMove");
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -26,18 +22,23 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpPressed = true;
         }
+        Debug.Log("OnJump");
     }
 
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    
     void FixedUpdate()
     {
         float velox = speed * moveInput.x;
 
-        if (velox != 0 )
-        {
-            rb.linearVelocity = new Vector3(velox, rb.linearVelocity.y, 0f);
-            Debug.Log("Moving");
-        }
+        rb.linearVelocity = new Vector2(velox, rb.linearVelocity.y);
+
         Jump();
+        
     }
 
     void Jump()
