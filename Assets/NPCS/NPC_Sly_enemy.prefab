@@ -105,9 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a0b53888ff42a47b6776e4067abf23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Npc_Sly_enemy
-  MoveSpeed: 5
+  MoveSpeed: 4
   JumpForce: 10
-  DetectionRadius: 6
+  DetectionRadius: 5
   GroundLayer:
     serializedVersion: 2
     m_Bits: 128
