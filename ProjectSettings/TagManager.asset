@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Ground
+  - NPC_enemy
+  - NPC_ally
   layers:
   - Default
   - TransparentFX
@@ -49,6 +52,9 @@ TagManager:
     locked: 0
   - name: player&NPC
     uniqueID: 1637995493
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 1238382981
     locked: 0
   m_RenderingLayers:
   - Default
