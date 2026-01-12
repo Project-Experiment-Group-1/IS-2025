@@ -73,8 +73,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-       // animator.SetBool("isRunning", Mathf.Abs(moveInput.x) > 0.1f);
-      //  animator.SetBool("isJumping", !isGrounded);
+        animator.SetBool("isRunning", Mathf.Abs(moveInput.x) > 0.1f);
+        animator.SetBool("isJumping", !isGrounded);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
